@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kabinet</title>
+  <link rel="icon" type="image/x-icon" href="img/fav.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css\logined.css">
+</head>
+<body>
+<div class="line2">
+<div class="line">
+<div class="menu">
+    <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+    <li style="--i:0;">
+      <a href="logined.html"><ion-icon name="person-outline"></ion-icon></a>
+    </li>
+    <li style="--i:1;">
+      <a href="404.html"><ion-icon name="settings-outline"></ion-icon></a>
+    </li>
+    <li style="--i:2;">
+      <a href="index.html"><ion-icon name="home-outline"></ion-icon></a>
+    </li>
+    <li style="--i:3;">
+      <a href="login.html"><ion-icon name="key-outline"></ion-icon></a>
+    </li>
+    <li style="--i:4;">
+      <a href="dog.html"><ion-icon name="videocam-outline"></ion-icon></a>
+    </li>
+    <li style="--i:5;">
+      <a href="404.html"><ion-icon name="game-controller-outline"></ion-icon></a>
+    </li>
+    <li style="--i:6;">
+      <a href="404.html"><ion-icon name="camera-outline"></ion-icon></a>
+    </li>
+    <li style="--i:7;">
+      <a href="404.html"><ion-icon name="mail-outline"></ion-icon></a>
+    </li>
+  </div>
+</div>
+</div>
+  <div class="profile-card">
+    <div class="card-header">
+      <div class="pic">
+        <img src="img\pic.png" alt="">
+      </div>
+      <div class="name">Abdulaziz N.</div>
+      <div class="desc">Developer & Designer</div>
+      <div class="sm">
+        <a href="404.html" class="fab fa-facebook-f"></a>
+        <a href="404.html" class="fab fa-twitter"></a>
+        <a href="https://github.com/Abdulaziz20007" class="fab fa-github"></a>
+        <a href="404.html" class="fab fa-youtube"></a>
+      </div>
+      <a href="#" onclick="MyFunction()" class="contact-btn">Bog'lanish</a>
+    </div>
+    <div class="card-footer">
+      <div class="numbers">
+        <div class="item">
+          <span>N/A</span>
+          Postlar
+        </div>
+        <div class="border"></div>
+        <div class="item">
+          <span>N/A</span>
+          Likelar
+        </div>
+        <div class="border"></div>
+        <div class="item">
+          <span>N/A</span>
+          Obunachilar
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<style>
+body
+{
+  background: url(img/bg.jpg), no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+<style>
+    }
+.menu
+{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li
+{
+    position: absolute;
+    top: 10px;
+    left: -70px;
+    list-style: none;
+    transform-origin: 100px;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(80px);
+}
+.menu.active li
+{
+    transform: rotate(calc(360deg / 8 * var(--i)));
+}
+.menu li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    color: #111;
+    transition: 0.5s;
+}
+.menu li a:hover
+{
+    color: #ff1252;
+}
+.toggle
+{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+.menu.active .toggle
+{
+    transform: rotate(315deg);
+}
+.line
+{
+  position: absolute;
+  top: 76px;
+  left: 74px;
+}
+.line2
+{
+  top: 50%;
+  right: 40%;
+  background: #fff;
+}
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  let toggle = document.querySelector('.toggle');
+  let menu = document.querySelector('.menu');
+  toggle.onclick = function(){
+    menu.classList.toggle('active')
+  }
+</script>
